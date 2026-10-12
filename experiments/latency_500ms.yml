@@ -1,0 +1,5 @@
+name: inventory-latency-500ms
+description: Inventory responds 500ms +/-100ms slower (e.g. noisy neighbour, GC pause)
+duration_s: 10
+hypothesis: {max_error_rate: 0.01, max_p95_ms: 400}
+fault: {type: network, toxics: {latency_ms: 500, jitter_ms: 100}}

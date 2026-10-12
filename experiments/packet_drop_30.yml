@@ -1,0 +1,5 @@
+name: inventory-conn-drop-30pct
+description: 30% of new connections to inventory are reset
+duration_s: 10
+hypothesis: {max_error_rate: 0.01, max_p95_ms: 400}
+fault: {type: network, toxics: {drop_rate: 0.3}}

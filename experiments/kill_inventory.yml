@@ -1,0 +1,5 @@
+name: inventory-sigkill
+description: Inventory process SIGKILLed, restarted after the fault window
+duration_s: 10
+hypothesis: {max_error_rate: 0.01, max_p95_ms: 400}
+fault: {type: kill, restart_after_s: 0}
