@@ -1,0 +1,368 @@
+[
+ {
+  "experiment": "inventory-sigkill",
+  "resilience": "off",
+  "fault": {
+   "type": "kill",
+   "restart_after_s": 0
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 11.8,
+   "max_ms": 40.4
+  },
+  "during": {
+   "requests": 396,
+   "error_rate": 1.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 6.7,
+   "p95_ms": 15.5,
+   "max_ms": 59.2
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 13.2,
+   "max_ms": 41.9
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-sigkill",
+  "resilience": "on",
+  "fault": {
+   "type": "kill",
+   "restart_after_s": 0
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 13.2,
+   "max_ms": 39.3
+  },
+  "during": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 1.0,
+   "p50_ms": 57.6,
+   "p95_ms": 75.1,
+   "max_ms": 85.7
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.4,
+   "p95_ms": 12.6,
+   "max_ms": 49.1
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-sigkill",
+  "resilience": "tuned",
+  "fault": {
+   "type": "kill",
+   "restart_after_s": 0
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 13.7,
+   "max_ms": 43.6
+  },
+  "during": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 1.0,
+   "p50_ms": 57.7,
+   "p95_ms": 75.2,
+   "max_ms": 91.7
+  },
+  "recovery": {
+   "requests": 396,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 13.2,
+   "max_ms": 49.2
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-latency-500ms",
+  "resilience": "off",
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "latency_ms": 500,
+    "jitter_ms": 100
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 12.8,
+   "max_ms": 52.6
+  },
+  "during": {
+   "requests": 396,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 511.6,
+   "p95_ms": 603.4,
+   "max_ms": 627.2
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 12.8,
+   "max_ms": 45.5
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-latency-500ms",
+  "resilience": "on",
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "latency_ms": 500,
+    "jitter_ms": 100
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 8.0,
+   "p95_ms": 12.9,
+   "max_ms": 36.0
+  },
+  "during": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 1.0,
+   "p50_ms": 658.9,
+   "p95_ms": 662.1,
+   "max_ms": 676.7
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.9,
+   "p95_ms": 13.0,
+   "max_ms": 56.2
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-latency-500ms",
+  "resilience": "tuned",
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "latency_ms": 500,
+    "jitter_ms": 100
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.8,
+   "p95_ms": 13.6,
+   "max_ms": 47.2
+  },
+  "during": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 1.0,
+   "p50_ms": 157.3,
+   "p95_ms": 159.7,
+   "max_ms": 193.8
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.8,
+   "p95_ms": 12.6,
+   "max_ms": 46.9
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-conn-drop-30pct",
+  "resilience": "off",
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "drop_rate": 0.3
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.8,
+   "p95_ms": 13.2,
+   "max_ms": 49.5
+  },
+  "during": {
+   "requests": 396,
+   "error_rate": 0.2753,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 13.0,
+   "max_ms": 47.9
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.9,
+   "p95_ms": 11.1,
+   "max_ms": 35.0
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-conn-drop-30pct",
+  "resilience": "on",
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "drop_rate": 0.3
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.8,
+   "p95_ms": 13.1,
+   "max_ms": 32.1
+  },
+  "during": {
+   "requests": 395,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0861,
+   "p50_ms": 8.4,
+   "p95_ms": 60.0,
+   "max_ms": 103.7
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 12.3,
+   "max_ms": 54.5
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-conn-drop-30pct",
+  "resilience": "tuned",
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "drop_rate": 0.3
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 13.0,
+   "max_ms": 36.4
+  },
+  "during": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0907,
+   "p50_ms": 8.4,
+   "p95_ms": 60.0,
+   "max_ms": 83.5
+  },
+  "recovery": {
+   "requests": 396,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.8,
+   "p95_ms": 14.1,
+   "max_ms": 61.3
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ }
+]

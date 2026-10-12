@@ -1,0 +1,29 @@
+| Experiment | Resilience | Phase | req | err% | degraded% | p50 ms | p95 ms | hypothesis |
+|---|---|---|---|---|---|---|---|---|
+| inventory-sigkill | off | steady | 398 | 0.0 | 0.0 | 7.7 | 11.8 | PASS |
+| inventory-sigkill | off | during | 396 | 100.0 | 0.0 | 6.7 | 15.5 | FAIL |
+| inventory-sigkill | off | recovery | 397 | 0.0 | 0.0 | 7.7 | 13.2 | PASS |
+| inventory-sigkill | on | steady | 397 | 0.0 | 0.0 | 7.6 | 13.2 | PASS |
+| inventory-sigkill | on | during | 398 | 0.0 | 100.0 | 57.6 | 75.1 | PASS |
+| inventory-sigkill | on | recovery | 397 | 0.0 | 0.0 | 7.4 | 12.6 | PASS |
+| inventory-sigkill | tuned | steady | 397 | 0.0 | 0.0 | 7.6 | 13.7 | PASS |
+| inventory-sigkill | tuned | during | 398 | 0.0 | 100.0 | 57.7 | 75.2 | PASS |
+| inventory-sigkill | tuned | recovery | 396 | 0.0 | 0.0 | 7.7 | 13.2 | PASS |
+| inventory-latency-500ms | off | steady | 397 | 0.0 | 0.0 | 7.7 | 12.8 | PASS |
+| inventory-latency-500ms | off | during | 396 | 0.0 | 0.0 | 511.6 | 603.4 | FAIL |
+| inventory-latency-500ms | off | recovery | 397 | 0.0 | 0.0 | 7.7 | 12.8 | PASS |
+| inventory-latency-500ms | on | steady | 397 | 0.0 | 0.0 | 8.0 | 12.9 | PASS |
+| inventory-latency-500ms | on | during | 397 | 0.0 | 100.0 | 658.9 | 662.1 | FAIL |
+| inventory-latency-500ms | on | recovery | 397 | 0.0 | 0.0 | 7.9 | 13.0 | PASS |
+| inventory-latency-500ms | tuned | steady | 398 | 0.0 | 0.0 | 7.8 | 13.6 | PASS |
+| inventory-latency-500ms | tuned | during | 397 | 0.0 | 100.0 | 157.3 | 159.7 | PASS |
+| inventory-latency-500ms | tuned | recovery | 397 | 0.0 | 0.0 | 7.8 | 12.6 | PASS |
+| inventory-conn-drop-30pct | off | steady | 397 | 0.0 | 0.0 | 7.8 | 13.2 | PASS |
+| inventory-conn-drop-30pct | off | during | 396 | 27.5 | 0.0 | 7.7 | 13.0 | FAIL |
+| inventory-conn-drop-30pct | off | recovery | 397 | 0.0 | 0.0 | 7.9 | 11.1 | PASS |
+| inventory-conn-drop-30pct | on | steady | 398 | 0.0 | 0.0 | 7.8 | 13.1 | PASS |
+| inventory-conn-drop-30pct | on | during | 395 | 0.0 | 8.6 | 8.4 | 60.0 | PASS |
+| inventory-conn-drop-30pct | on | recovery | 397 | 0.0 | 0.0 | 7.6 | 12.3 | PASS |
+| inventory-conn-drop-30pct | tuned | steady | 397 | 0.0 | 0.0 | 7.7 | 13.0 | PASS |
+| inventory-conn-drop-30pct | tuned | during | 397 | 0.0 | 9.1 | 8.4 | 60.0 | PASS |
+| inventory-conn-drop-30pct | tuned | recovery | 396 | 0.0 | 0.0 | 7.8 | 14.1 | PASS |

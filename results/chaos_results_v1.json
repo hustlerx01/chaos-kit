@@ -1,0 +1,246 @@
+[
+ {
+  "experiment": "inventory-sigkill",
+  "resilience": false,
+  "fault": {
+   "type": "kill",
+   "restart_after_s": 0
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 10.5,
+   "max_ms": 44.5
+  },
+  "during": {
+   "requests": 397,
+   "error_rate": 1.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 6.7,
+   "p95_ms": 12.3,
+   "max_ms": 52.9
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 12.8,
+   "max_ms": 40.7
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-sigkill",
+  "resilience": true,
+  "fault": {
+   "type": "kill",
+   "restart_after_s": 0
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.5,
+   "p95_ms": 12.3,
+   "max_ms": 35.9
+  },
+  "during": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 1.0,
+   "p50_ms": 58.0,
+   "p95_ms": 74.9,
+   "max_ms": 85.8
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 13.0,
+   "max_ms": 41.7
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-latency-500ms",
+  "resilience": false,
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "latency_ms": 500,
+    "jitter_ms": 100
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 13.0,
+   "max_ms": 36.8
+  },
+  "during": {
+   "requests": 396,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 510.6,
+   "p95_ms": 599.2,
+   "max_ms": 610.0
+  },
+  "recovery": {
+   "requests": 396,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 13.1,
+   "max_ms": 59.9
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-latency-500ms",
+  "resilience": true,
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "latency_ms": 500,
+    "jitter_ms": 100
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 398,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 12.1,
+   "max_ms": 38.3
+  },
+  "during": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 1.0,
+   "p50_ms": 658.5,
+   "p95_ms": 661.6,
+   "max_ms": 678.5
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 8.1,
+   "p95_ms": 14.1,
+   "max_ms": 55.9
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-conn-drop-30pct",
+  "resilience": false,
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "drop_rate": 0.3
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.9,
+   "p95_ms": 12.9,
+   "max_ms": 44.5
+  },
+  "during": {
+   "requests": 396,
+   "error_rate": 0.2854,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.6,
+   "p95_ms": 13.7,
+   "max_ms": 53.8
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.7,
+   "p95_ms": 13.0,
+   "max_ms": 41.0
+  },
+  "steady_ok": true,
+  "during_ok": false,
+  "recovered": true
+ },
+ {
+  "experiment": "inventory-conn-drop-30pct",
+  "resilience": true,
+  "fault": {
+   "type": "network",
+   "toxics": {
+    "drop_rate": 0.3
+   }
+  },
+  "hypothesis": {
+   "max_error_rate": 0.01,
+   "max_p95_ms": 400
+  },
+  "steady": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.9,
+   "p95_ms": 12.7,
+   "max_ms": 35.2
+  },
+  "during": {
+   "requests": 396,
+   "error_rate": 0.0,
+   "degraded_rate": 0.1263,
+   "p50_ms": 9.2,
+   "p95_ms": 61.5,
+   "max_ms": 92.5
+  },
+  "recovery": {
+   "requests": 397,
+   "error_rate": 0.0,
+   "degraded_rate": 0.0,
+   "p50_ms": 7.8,
+   "p95_ms": 13.9,
+   "max_ms": 51.1
+  },
+  "steady_ok": true,
+  "during_ok": true,
+  "recovered": true
+ }
+]
