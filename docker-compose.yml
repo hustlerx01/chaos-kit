@@ -1,0 +1,4 @@
+services:
+  chaos:
+    build: .
+    volumes: ["./results:/app/results"]
